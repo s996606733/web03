@@ -1,0 +1,524 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: "Chocolate Classical Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    flex-wrap: wrap;
+    position: sticky; //固定導覽列
+    z-index: 5; //階層要高於其他內容
+    top: 0; //可更改固定位置
+    background-color: white;
+    box-shadow: 3px 3px 5px 1px #757474;
+
+    div.logo {
+        display: flex;
+        align-items: center;
+        flex-grow: 5; //給每個子容器增加剩餘空間
+        flex-shrink: 1;
+        flex-basis: 400px;
+
+        img {
+            width: 6vw;
+            height: 6vw;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #5D0E41;
+        }
+    }
+
+    nav {
+        flex: 2 1 400px;
+        margin-top: 15px;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: space-around;
+
+            li {
+                border: 2px solid #5D0E41;
+                border-radius: 0 20px 0 20px;
+                box-shadow: inset 5px 5px #A0153E;
+                padding: 10px;
+                box-sizing: border-box;
+
+                a {
+                    color: #00224d;
+                    text-decoration: none;
+                    font-size: 1.35rem;
+                }
+            }
+        }
+
+    }
+}
+
+main {
+    section.aboutus {
+        background-image: url(../Pictures/diamondhead.jpg);
+        min-height: 90vh; //將圖片撐開
+        width: 100%;
+        background-size: cover; //圖片等比例縮放 contain也是，但原圖會重複            
+        background-position: center; //將圖片置中
+        position: relative; //讓背影圖片以section為定位點
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin: 5px;
+
+        h3 {
+            font-size: 3.5rem;
+            color: #FFF;
+            text-shadow: 5px 5px 5px black;
+            line-height: 5rem;
+            margin: 2rem 0rem;
+        }
+    }
+
+    section.backImage {
+        background-image: url(../Pictures/pexels-photo-416676.jpeg);
+        min-height: 90vh; //將圖片撐開
+        width: 100%;
+        background-size: cover; //圖片等比例縮放 contain也是，但原圖會重複            
+        background-position: center; //將圖片置中
+        position: relative; //讓背影圖片以section為定位點
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin: 5px;
+
+        h3 {
+            font-size: 3.5rem;
+            color: #FF204E;
+            line-height: 5rem;
+            margin: 2rem 0rem;
+        }
+
+        button.start {
+            background: #A0153E;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.5rem;
+            color: white;
+            border: none;
+            border-radius: 1rem;
+            cursor: pointer; //改變游標
+        }
+
+        div.filter {
+            background-color: rgba(0, 0, 0, 0.2);
+            width: 100%;
+            min-height: 90vh;
+            position: absolute; //搭配z-index讓想要的內容在最上層
+            top: 0;
+            z-index: -1;
+        }
+    }
+
+    section.second {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        h2 {
+            font-size: 2rem;
+            margin: 2rem 0rem;
+            line-height: 3rem;
+            color: #5D0E41;
+        }
+
+        .store {
+            h3 {
+                font-size: 1.5rem;
+                color: #A0153E;
+                text-align: left;
+            }
+
+            p {
+                text-align: left;
+                margin: 1rem 0;
+            }
+
+            iframe {
+                border-radius: 10px;
+            }
+
+        }
+
+        .login {
+            text-align: left;
+
+            h2 {
+                font-size: 2rem;
+                color: #5D0E41;
+                text-align: left;
+            }
+
+            input {
+                border: none;
+                border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+                margin: 1rem 0;
+            }
+
+            button {
+                font-size: 1rem;
+                // padding: 5px 100px;
+                width: 300px;
+                height: 50px;
+                margin: 10px 0;
+                color: whitesmoke;
+                font-weight: bold;
+                background-color: #5D0E41;
+                border: none;
+                border-radius: 10px;
+            }
+        }
+
+        section.cards {
+            display: flex;
+            border: 0px solid #5D0E41;
+            width: 80%;
+            min-height: 80vh; //推長內容框框
+            flex-wrap: wrap;
+
+            h4 {
+                font-size: 2rem;
+                margin: 1rem 0rem;
+            }
+
+            p {
+                font-size: 1.25rem;
+            }
+
+            a {
+                margin: 1rem 0rem;
+                text-decoration: none;
+                padding: 1rem 1.5rem;
+                background-color: #A0153E;
+                color: white;
+                font-size: 1.25rem;
+            }
+
+            div.card {
+                border: 2px solid #5D0E41;
+                display: flex;
+                flex-direction: column; //橫向排列 預設換行
+                align-items: center;
+                justify-content: space-around;
+                padding: 1rem; //推開字邊界
+                flex: 1 1 300px; //內元件的基準值 由於父元件橫向排列所以是寬
+
+                div.image-container {
+                    overflow: hidden; //在邊框內變化
+                    width: 15vw;
+                    height: 15vw;
+                    border-radius: 50%;
+
+                    img {
+                        width: 15vw;
+                        height: 15vw;
+                        border-radius: 50%;
+                        transition: all 0.2s;
+                    }
+
+                    img:hover {
+                        transform: scale(2);
+                    }
+                }
+
+                div.image-container1 {
+                    img {
+                        width: 20vw;
+                        height: 20vw;
+                        transition: all 0.2s;
+                        border: 3px dotted #A0153E;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 40vh;
+    justify-content: space-around;
+    background-color: rgb(207, 207, 207);
+
+    div.logo {
+        display: flex;
+        align-items: center;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        img {
+            width: 6vw;
+            height: 6vw;
+        }
+    }
+
+    nav {
+        width: 30%;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            width: 100%;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            li {
+                flex-basis: 100px;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                    font-size: 1.35rem;
+
+                }
+            }
+        }
+    }
+
+    section.links {
+        a {
+            margin: 0rem 1rem;
+
+            img {
+                width: 5vw;
+                height: 5vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    header {
+        div.logo {
+            margin-left: 0.5rem;
+
+            img {
+                width: 15vw;
+                height: 15vw;
+            }
+        }
+    }
+
+    footer {
+        div.logo {
+            margin-left: 0.5rem;
+
+            img {
+                width: 15vw;
+                height: 15vw;
+            }
+        }
+
+        section.links {
+            margin-top: 1rem;
+
+            a {
+                img {
+                    width: 10vw;
+                    height: 10vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        section.second {
+            section.cards {
+                div.card. div.image-container {
+                    img {
+                        width: 40vw;
+                        height: 40vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5D0E41;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #A0153E;
+}
+
+.content {
+    width: 100%;
+    justify-content: space-between;
+}

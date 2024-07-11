@@ -1,0 +1,447 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Chocolate Classical Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+  flex-wrap: wrap;
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  background-color: white;
+  box-shadow: 3px 3px 5px 1px #757474;
+}
+header div.logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 5;
+  flex-shrink: 1;
+  flex-basis: 400px;
+}
+header div.logo img {
+  width: 6vw;
+  height: 6vw;
+}
+header div.logo h1 {
+  font-size: 2rem;
+  color: #5D0E41;
+}
+header nav {
+  flex: 2 1 400px;
+  margin-top: 15px;
+}
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+header nav ul li {
+  border: 2px solid #5D0E41;
+  border-radius: 0 20px 0 20px;
+  box-shadow: inset 5px 5px #A0153E;
+  padding: 10px;
+  box-sizing: border-box;
+}
+header nav ul li a {
+  color: #00224d;
+  text-decoration: none;
+  font-size: 1.35rem;
+}
+
+main section.aboutus {
+  background-image: url(../Pictures/diamondhead.jpg);
+  min-height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 5px;
+}
+main section.aboutus h3 {
+  font-size: 3.5rem;
+  color: #FFF;
+  text-shadow: 5px 5px 5px black;
+  line-height: 5rem;
+  margin: 2rem 0rem;
+}
+main section.backImage {
+  background-image: url(../Pictures/pexels-photo-416676.jpeg);
+  min-height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 5px;
+}
+main section.backImage h3 {
+  font-size: 3.5rem;
+  color: #FF204E;
+  line-height: 5rem;
+  margin: 2rem 0rem;
+}
+main section.backImage button.start {
+  background: #A0153E;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+main section.backImage div.filter {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  min-height: 90vh;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+main section.second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main section.second h2 {
+  font-size: 2rem;
+  margin: 2rem 0rem;
+  line-height: 3rem;
+  color: #5D0E41;
+}
+main section.second .store h3 {
+  font-size: 1.5rem;
+  color: #A0153E;
+  text-align: left;
+}
+main section.second .store p {
+  text-align: left;
+  margin: 1rem 0;
+}
+main section.second .store iframe {
+  border-radius: 10px;
+}
+main section.second .login {
+  text-align: left;
+}
+main section.second .login h2 {
+  font-size: 2rem;
+  color: #5D0E41;
+  text-align: left;
+}
+main section.second .login input {
+  border: none;
+  border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+  margin: 1rem 0;
+}
+main section.second .login button {
+  font-size: 1rem;
+  width: 300px;
+  height: 50px;
+  margin: 10px 0;
+  color: whitesmoke;
+  font-weight: bold;
+  background-color: #5D0E41;
+  border: none;
+  border-radius: 10px;
+}
+main section.second section.cards {
+  display: flex;
+  border: 0px solid #5D0E41;
+  width: 80%;
+  min-height: 80vh;
+  flex-wrap: wrap;
+}
+main section.second section.cards h4 {
+  font-size: 2rem;
+  margin: 1rem 0rem;
+}
+main section.second section.cards p {
+  font-size: 1.25rem;
+}
+main section.second section.cards a {
+  margin: 1rem 0rem;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  background-color: #A0153E;
+  color: white;
+  font-size: 1.25rem;
+}
+main section.second section.cards div.card {
+  border: 2px solid #5D0E41;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  flex: 1 1 300px;
+}
+main section.second section.cards div.card div.image-container {
+  overflow: hidden;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+}
+main section.second section.cards div.card div.image-container img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+main section.second section.cards div.card div.image-container img:hover {
+  transform: scale(2);
+}
+main section.second section.cards div.card div.image-container1 img {
+  width: 20vw;
+  height: 20vw;
+  transition: all 0.2s;
+  border: 3px dotted #A0153E;
+  border-radius: 5px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 40vh;
+  justify-content: space-around;
+  background-color: rgb(207, 207, 207);
+}
+footer div.logo {
+  display: flex;
+  align-items: center;
+}
+footer div.logo h1 {
+  font-size: 2rem;
+}
+footer div.logo img {
+  width: 6vw;
+  height: 6vw;
+}
+footer nav {
+  width: 30%;
+}
+footer nav ul {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+footer nav ul li {
+  flex-basis: 100px;
+}
+footer nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.35rem;
+}
+footer section.links a {
+  margin: 0rem 1rem;
+}
+footer section.links a img {
+  width: 5vw;
+  height: 5vw;
+}
+
+@media screen and (max-width: 550px) {
+  header div.logo {
+    margin-left: 0.5rem;
+  }
+  header div.logo img {
+    width: 15vw;
+    height: 15vw;
+  }
+  footer div.logo {
+    margin-left: 0.5rem;
+  }
+  footer div.logo img {
+    width: 15vw;
+    height: 15vw;
+  }
+  footer section.links {
+    margin-top: 1rem;
+  }
+  footer section.links a img {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  main section.second section.cards div.card img {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5D0E41;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #A0153E;
+}
+
+.content {
+  width: 100%;
+  justify-content: space-between;
+}/*# sourceMappingURL=style.css.map */
